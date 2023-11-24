@@ -3,8 +3,7 @@ Gunicorn
 Image
 tensorflow
 openai
-os
-PIL
+OS
 numpy
 render_template
 request 
