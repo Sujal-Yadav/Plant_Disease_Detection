@@ -1,2 +1,10 @@
 Flask
 Gunicorn
+Image
+tensorflow
+openai
+os
+numpy
+render_template
+request 
+send_from_directory
