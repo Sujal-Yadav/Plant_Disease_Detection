@@ -4,6 +4,3 @@ Image
 tensorflow
 openai
 numpy
-render_template
-request 
-send_from_directory
