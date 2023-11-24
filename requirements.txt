@@ -4,6 +4,7 @@ Image
 tensorflow
 openai
 os
+PIL
 numpy
 render_template
 request 
