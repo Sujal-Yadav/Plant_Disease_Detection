@@ -4,10 +4,10 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 import openai
-import creds
+from creds import apikey
 app = Flask(__name__)
 
-openai.api_key = creds.api_key
+openai.api_key = apikey
 
 UPLOAD_FOLDER = 'uploads'
 if not os.path.exists(UPLOAD_FOLDER):
