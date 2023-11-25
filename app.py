@@ -7,7 +7,7 @@ import openai
 
 app = Flask(__name__)
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 UPLOAD_FOLDER = 'uploads'
 if not os.path.exists(UPLOAD_FOLDER):
