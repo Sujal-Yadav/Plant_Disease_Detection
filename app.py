@@ -3,11 +3,11 @@ import os
 from PIL import Image
 import numpy as np
 import tensorflow as tf
-import openai
-from creds import apikey
+# import openai
+# from creds import apikey
 app = Flask(__name__)
 
-openai.api_key = apikey
+# openai.api_key = apikey
 
 UPLOAD_FOLDER = 'uploads'
 if not os.path.exists(UPLOAD_FOLDER):
@@ -49,11 +49,11 @@ def upload_file():
             # Display image in Flask application web page
             uploaded_image = file.filename
 
-            dataset = tf.keras.preprocessing.image_dataset_from_directory(f"D:/B.Tech Semester 5/AI & ML Project/Dataset/{dropdown_data}", shuffle=True)
+            dataset = tf.keras.preprocessing.image_dataset_from_directory(f"D:/VSCode/Plant_Disease_Detection/Dataset/{dropdown_data}", shuffle=True)
             class_names = dataset.class_names # type: ignore 
 
             # Process the uploaded image
-            model = tf.keras.models.load_model(f"D:/B.Tech Semester 5/AI & ML Project/models/{dropdown_data}")
+            model = tf.keras.models.load_model("D:/VSCode/Other/models/plant_village_denseNet.h5")
             img_array = process_image(filename)
 
             predicted_class_name = predict_image_class(img_array, model, class_names)
